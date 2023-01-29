@@ -1,0 +1,45 @@
+.technologies-wrapper {
+    margin-top: 80px;
+    border-top: 1px solid $white;
+}
+
+.fa-brands {
+  font-size: 30px;
+  color: $green;
+  transition: all 0.2s linear;
+  &:hover {
+    color: $white;
+    transform: scale(1.2);
+}
+}
+.fa-solid {
+  font-size: 30px;
+  color: $green;
+  transition: all 0.2s linear;
+  &:hover {
+    color: $white;
+    transform: scale(1.2);
+}
+}
+
+.technologies {
+  border-bottom: 1px solid $white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 345px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  &__title {
+    text-align: center;
+    font-weight: 700;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

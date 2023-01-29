@@ -3,10 +3,24 @@ body {
   flex-direction: column;
   font-family: $font;
   align-items: center;
+  justify-content: center;
   min-height: 100vh; 
   background-color: $black;
+  background-image: url(/starter-code/assets/images/pattern-circle.svg), url(/starter-code/assets/images/pattern-rings.svg), url(/starter-code/assets/images/pattern-rings.svg);
+  background-position: 125% 17%, 220% 10%, -100% 53%;
+  background-repeat: no-repeat;
   transition: 0.2s linear;
   color: $white;
   font-size: 16px;
   position: relative;
+}
+
+.page-wrapper {
+  box-sizing: border-box;
+  width: 375px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

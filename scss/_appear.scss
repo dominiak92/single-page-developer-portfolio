@@ -1,0 +1,15 @@
+.appear2 {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+
+  &.inview2 {
+      opacity: 1;
+      transform: none;
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.1s;
+      }
+    }
+  }
+}

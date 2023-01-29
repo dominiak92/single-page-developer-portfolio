@@ -8,7 +8,7 @@ $background-color_2: #4070F4;
 $background-color_3: #6E93f7;
 
 .slide-container {
-	max-width: 1120px;
+	max-width: 365px;
 	width: 100%;
 	padding: 40px 0;
 }
@@ -19,91 +19,42 @@ $background-color_3: #6E93f7;
 }
 .card {
 	border-radius: 25px;
-	background-color: $background-color_1;
+	background-color: $darkgray;
 }
 .image-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 10px 14px;
 	position: relative;
 	row-gap: 5px;
-	padding: 25px 0;
+    width: 100%;
+    height: 300px;
+	.card-img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+        border-radius: 25px;
+	}
 }
 .card-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 10px 14px;
-}
-.overlay {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: $background-color_2;
-	border-radius: 25px 25px 0 25px;
-	&::before {
-		content: '';
-		position: absolute;
-		right: 0;
-		bottom: -40px;
-		height: 40px;
-		width: 40px;
-		background-color: $background-color_2;
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		right: 0;
-		bottom: -40px;
-		height: 40px;
-		width: 40px;
-		background-color: $background-color_2;
-		border-radius: 0 25px 0 0;
-		background-color: $background-color_1;
-	}
-}
-.card-image {
-	position: relative;
-	height: 150px;
-	width: 150px;
-	border-radius: 50%;
-	background: #FFF;
-	padding: 3px;
-	.card-img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-		border-radius: 50%;
-		border: 4px solid #4070F4;
-	}
-}
-.name {
-	font-size: 18px;
-	font-weight: 500;
-	color: $color_1;
+    justify-content: end;
+    padding: 10px;
 }
 .description {
+    display: flex;
+    align-items: center;
 	font-size: 14px;
 	color: $color_2;
+    padding: 5px;
 	text-align: center;
+    height: 110px;
 }
-.button {
-	border: none;
-	font-size: 16px;
-	color: $color_3;
-	padding: 8px 16px;
-	background-color: $background-color_2;
-	border-radius: 6px;
-	margin: 14px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	&:hover {
-		background: #265DF2;
-	}
-}
+
+@include cardBtn;
+
 .swiper-navBtn {
 	color: $color_4;
 	transition: color 0.3s ease;
@@ -124,11 +75,11 @@ $background-color_3: #6E93f7;
 	left: 0;
 }
 .swiper-pagination-bullet {
-	background-color: $background-color_3;
+	background-color: $green;
 	opacity: 1;
 }
 .swiper-pagination-bullet-active {
-	background-color: $background-color_2;
+	background-color: $green;
 }
 @media screen and (max-width: 768px) {
 	.slide-content {
