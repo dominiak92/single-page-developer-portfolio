@@ -10,7 +10,7 @@ body {
   justify-content: center;
   min-height: 100vh; 
   background-color: $black;
-  background-image: url(/starter-code/assets/images/pattern-circle.svg), url(/starter-code/assets/images/pattern-rings.svg), url(/starter-code/assets/images/pattern-rings.svg);
+  background-image: url(./../starter-code/assets/images/pattern-circle.svg), url(./../starter-code/assets/images/pattern-rings.svg), url(./../starter-code/assets/images/pattern-rings.svg);
   background-position: 125% 10%, 220% 5%, -100% 40%;
   background-repeat: no-repeat;
   transition: 0.2s linear;
