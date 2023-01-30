@@ -1,0 +1,36 @@
+.footer {
+    margin-top: 39px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__ico {
+        display: flex;
+        justify-content: space-around;
+        width: 174px;
+        &:hover {
+          color: $white;
+      }
+        .fa-square-facebook {
+          cursor: pointer;
+          color: $white;
+          font-size: 30px;
+        }
+      }
+      &__github {
+        transition: all 0.2s linear;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+      }
+      }
+      &__frontend{
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+          transform: scale(1.2);
+          
+      }
+      }
+}

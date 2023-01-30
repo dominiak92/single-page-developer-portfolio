@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -7,7 +11,7 @@ body {
   min-height: 100vh; 
   background-color: $black;
   background-image: url(/starter-code/assets/images/pattern-circle.svg), url(/starter-code/assets/images/pattern-rings.svg), url(/starter-code/assets/images/pattern-rings.svg);
-  background-position: 125% 17%, 220% 10%, -100% 53%;
+  background-position: 125% 10%, 220% 5%, -100% 40%;
   background-repeat: no-repeat;
   transition: 0.2s linear;
   color: $white;
@@ -19,6 +23,7 @@ body {
   box-sizing: border-box;
   width: 375px;
   padding: 16px;
+  padding-bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;

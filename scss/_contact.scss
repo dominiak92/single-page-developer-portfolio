@@ -6,49 +6,72 @@
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    background-image: url(/starter-code/assets/images/pattern-rings.svg), url(/starter-code/assets/images/pattern-rings.svg);
+    background-position: 220% 5%, -100% 40%;
+    background-repeat: no-repeat;
 }
-// .contact {
-//     width: 343px;
-//     background-color: $darkgray;
-//     &__title {
-//         text-align: center;
-//         font-size: 40px;
-//         margin-top: 60px;
-//     }
-//     &__description {
-//         font-size: 16px;
-//         line-height: 26px;
-//         margin-top: 20px;
-//         color: $almostwhite;
-//         text-align: center;
-//     }
-//     &__form {
-//         margin-top: 50px;
-//         display: flex;
-//         flex-direction: column;
-//         color: $white;
-//     }
-//     &__name {
-//         @include input;
-//         &::placeholder {
-//             color: $white;
-//             margin-left: 24px;
-//         }
-//     }
-//     &__email {
-//         @include input;
-//         &::placeholder {
-//             color: $white
-//         }
-//     }
-//     &__message {
-//         @include input;
-//         &::placeholder {
-//             color: $white
-//         }
-//     }
-//     &__button {
-//         @include linebutton;
-//     }
 
-// }
+.contact {
+    width: 343px;
+    background-color: transparent;
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 60px;
+    }
+    &__description {
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 20px;
+        color: $almostwhite;
+        text-align: center;
+    }
+    &__form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        border-bottom: 1px solid $white;
+    }
+    &__name {
+        @include input;
+        color: $white;
+        &::placeholder {
+            color: $white;
+            margin-left: 24px;
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+    &__email {
+        @include input;
+        color: $white;
+        margin-top: 32px;
+        &::placeholder {
+            color: $white
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+    &__message {
+        @include input;
+        color: $white;
+        height: 100px;
+        margin-top: 32px;
+        &::placeholder {
+            color: $white
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+    &__button {
+        @include linebutton;
+        margin-top: 32px;
+        align-self: flex-end;
+        margin-bottom: 87px;
+    }
+
+}

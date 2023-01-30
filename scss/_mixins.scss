@@ -190,4 +190,8 @@
   line-height: 26px;
   letter-spacing: 2.28571px;
   cursor: pointer;
+  transition: 0.2s linear;
+  &:hover{
+    color: $green
+  }
 }

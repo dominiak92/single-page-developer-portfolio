@@ -43,4 +43,5 @@ let swiper = new Swiper(".slide-content", {
    for(let i=0; i < items.length; i++){
       io2.observe(items[i]);
    }
+   document.querySelector(".contact__form").reset();
   
