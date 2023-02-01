@@ -5,76 +5,145 @@
   align-items: center;
   position: absolute;
   top: 10px;
+  @include lg {
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-top: 14px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  @include xl{
+    padding-left: 150px;
+    padding-right: 150px;
+    box-sizing: border-box;
+  }
   &__name {
     text-align: center;
     font-size: 19px;
     margin-bottom: 20px;
     margin-top: 10px;
+    @include lg {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 24px;
+      font-size: 32px;
+    }
   }
   &__ico {
     display: flex;
     justify-content: space-around;
     width: 174px;
+    @include lg {
+      margin-right: 20px;
+      z-index: 1;
+    }
+    @include xl {
+      margin-right: 0;
+
+    }
     &:hover {
       color: $white;
-  }
+    }
     .fa-square-facebook {
       cursor: pointer;
+      flex-shrink: 0;
       color: $white;
-      font-size: 30px;
+      font-size: 25px;
     }
   }
   &__github {
     transition: all 0.2s linear;
     cursor: pointer;
+    flex-shrink: 0;
+    height: 25px;
+    width: 25px;
     &:hover {
       transform: scale(1.2);
+    }
   }
-  }
-  &__frontend{
+  &__frontend {
     cursor: pointer;
+    flex-shrink: 0;
     transition: all 0.2s linear;
+    height: 25px;
+    width: 25px;
     &:hover {
       transform: scale(1.2);
-      
-  }
+    }
   }
 }
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include lg {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 14px;
+    position: relative;
+  }
+  &__img {
+    width: 174px;
+    height: 383px;
+    top: 10px;
+    @include lg {
+      width: 330px;
+      height: 728px;
+      position: absolute;
+      top: -100px;
+      z-index: -1;
+      right: -10px;
+    }
+  }
+  &__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &__img {
-        width: 174px;
-        height: 383px;
-        top: 10px;
+    @include lg {
+      margin-top: 90px;
+      width: 100%;
+      align-items: flex-start;
     }
-    &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  }
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -1.14px;
+    line-height: 40px;
+    text-align: center;
+    @include lg {
+      font-size: 72px;
+      line-height: 72px;
+      text-align: left;
+      max-width: 1055px;
     }
-    &__title {
-        margin-top: 40px;
-        margin-bottom: 0px;
-        font-weight: 700;
-        font-size: 40px;
-        letter-spacing: -1.14px;
-        line-height: 40px;
-        text-align: center;
+    @include xl {
+      font-size: 88px;
+      line-height: 88px;
     }
-    &__name {
-        text-decoration: underline $green 4px;
+  }
+  &__name {
+    text-decoration: underline $green 4px;
+  }
+  &__description {
+    color: $almostwhite;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 24px;
+    @include lg {
+      text-align: left;
+      font-size: 18px;
+      width: 630px;
+      line-height: 28px;
+      margin-top: 60px;
+      margin-bottom: 44px;
     }
-    &__description {
-        color: $almostwhite;
-        font-size: 17px;
-        line-height: 26px;
-        text-align: center;
-        margin-top: 24px;
-    }
-        @include button;
-
+  }
+  @include button;
 }

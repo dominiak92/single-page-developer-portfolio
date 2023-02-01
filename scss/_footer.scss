@@ -5,32 +5,62 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &__ico {
+    @include lg {
+        flex-direction: row;
+        flex-shrink: 0;
+        margin-top: 14px;
+        margin-bottom: 40px;
+        width: 80%;
+        border-top: 1px solid $white;
+        padding-top: 30px;
+        justify-content: space-between;
+      }
+      &__name {
+        text-align: center;
+        font-size: 19px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        @include lg {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-size: 32px;
+        }
+      }
+      &__ico {
         display: flex;
         justify-content: space-around;
         width: 174px;
+        @include lg {
+            justify-content: space-between;
+        }
         &:hover {
           color: $white;
-      }
+        }
         .fa-square-facebook {
           cursor: pointer;
+          flex-shrink: 0;
           color: $white;
-          font-size: 30px;
+          font-size: 25px;
         }
       }
       &__github {
         transition: all 0.2s linear;
         cursor: pointer;
+        flex-shrink: 0;
+        height: 25px;
+        width: 25px;
         &:hover {
           transform: scale(1.2);
+        }
       }
-      }
-      &__frontend{
+      &__frontend {
         cursor: pointer;
+        flex-shrink: 0;
         transition: all 0.2s linear;
+        height: 25px;
+        width: 25px;
         &:hover {
           transform: scale(1.2);
-          
+        }
       }
-      }
-}
+    }

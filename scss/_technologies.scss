@@ -1,12 +1,22 @@
 .technologies-wrapper {
     margin-top: 80px;
     border-top: 1px solid $white;
+    @include lg {
+      margin-top: 130px;
+    }
+    @include xl {
+      width: 100%;
+      margin-top: 200px;
+    }
 }
 
 .fa-brands {
   font-size: 30px;
   color: $green;
   transition: all 0.2s linear;
+  @include lg {
+    font-size: 55px;
+  }
   &:hover {
     color: $white;
     transform: scale(1.2);
@@ -16,6 +26,9 @@
   font-size: 30px;
   color: $green;
   transition: all 0.2s linear;
+  @include lg {
+    font-size: 55px;
+  }
   &:hover {
     color: $white;
     transform: scale(1.2);
@@ -32,14 +45,26 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 15px;
+  @include lg {
+    width: 954px;
+  }
+  @include xl {
+    width: 100%;
+  }
   &__title {
     text-align: center;
     font-weight: 700;
+    @include lg {
+      font-size: 30px;
+    }
   }
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include lg {
+      font-size: 25px;
+    }
   }
 }

@@ -2,7 +2,7 @@ $color_1: #333;
 $color_2: #707070;
 $color_3: #FFF;
 $color_4: #6E93f7;
-$color_5: #4070F4;
+$color_5: darken($green, 30);
 $background-color_1: #FFF;
 $background-color_2: #4070F4;
 $background-color_3: #6E93f7;
@@ -11,6 +11,12 @@ $background-color_3: #6E93f7;
 	max-width: 365px;
 	width: 100%;
 	padding: 40px 0;
+	@include lg  {
+		max-width: 840px;
+	}
+	@include xl {
+		max-width: 1100px
+	}
 }
 .slide-content {
 	margin: 0 40px;
@@ -40,7 +46,7 @@ $background-color_3: #6E93f7;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 10px;
 }
 .description {
@@ -56,10 +62,10 @@ $background-color_3: #6E93f7;
 @include cardBtn;
 
 .swiper-navBtn {
-	color: $color_4;
+	color: $green;
 	transition: color 0.3s ease;
 	&:hover {
-		color: $color_5;
+		color: darken($green, 30);
 	}
 	&::before {
 		font-size: 35px;

@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,6 +18,10 @@ body {
   color: $white;
   font-size: 16px;
   position: relative;
+  @include lg {
+    background-image: url(./../starter-code/assets/images/pattern-rings.svg), url(./../starter-code/assets/images/pattern-rings.svg);
+    background-position: 130% 39%, -21% 5%
+  }
 }
 
 .page-wrapper {
@@ -28,4 +33,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include lg {
+    width: 100%;
+  }
+  @include xl {
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 }

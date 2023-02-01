@@ -6,9 +6,19 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 60px;
+    @include lg{
+      width: 954px;
+    }
+    @include xl {
+      width: 100%;
+      padding: 0px;
+    }
   }
   &__title {
     font-size: 40px;
+    @include lg  {
+      font-size: 72px;
+    }
   }
   &__button {
     @include linebutton;
